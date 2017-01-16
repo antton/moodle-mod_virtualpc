@@ -27,8 +27,8 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->version   = 2015020604;      // The current plugin version (Date: YYYYMMDDXX) XX = date +"%V"
-$plugin->requires  = 2016052300;      // Requires this Moodle version
+$plugin->requires  = 2014111012;      // Requires this Moodle version
 $plugin->cron      = 0;               // Period for cron to check this plugin (secs)
 $plugin->component = 'mod_virtualpc'; // To check on upgrade, that plugin sits in correct place.
 $plugin->maturity = MATURITY_STABLE; // Stable release
-$plugin->release = '3.1.1';         // Human-friendly version name
+$plugin->release = '2.8.12';         // Human-friendly version name
