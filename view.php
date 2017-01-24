@@ -41,7 +41,7 @@ if ($id) {
     $course     = $DB->get_record('course', array('id' => $virtualpc->course), '*', MUST_EXIST);
     $cm         = get_coursemodule_from_instance('virtualpc', $virtualpc->id, $course->id, false, MUST_EXIST);
 } else {
-    error('You must specify a course_module ID or an instance ID');
+    print_error('courseorinstanceid', 'virtualpc');
 }
 
 require_login($course, true, $cm);
@@ -83,13 +83,16 @@ if (has_capability('mod/virtualpc:view', $context)) {
 
     echo $OUTPUT->block($bc, BLOCK_POS_LEFT);
 
-    add_to_log ( $course->id, 'virtualpc', 'view', "view.php?id={$cm->id}",
-            'The user with id \''.$USER->id .
-            '\' viewed the VIRTUALPC activity with course module id \'' .
-            $cm->id .'\'', $cm->id, $USER->id );
-} else {
+    $params = array(
+        'context' => $context,
+        'objectid' => $cm->id
+    );
+    $event = \mod_virtualpc\event\course_module_viewed::create($params);
+    $event->add_record_snapshot('virtualpc', $virtualpc);
+    $event->trigger();
 
-    error('You must have permission to VIEW this resource');
+} else {
+    prin_error('viewpermission', 'virtualpc');
 }
 
 echo $OUTPUT->footer();
