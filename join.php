@@ -32,17 +32,17 @@ $id = required_param('id', PARAM_INT);
 $sesskey = required_param('sesskey', PARAM_ALPHANUM);
 
 if (!$cm = get_coursemodule_from_id('virtualpc', $id)) {
-    error('Course Module ID was incorrect');
+    print_error('incorrectcourseid', 'virtualpc');
 }
 
 $cond = array('id' => $cm->course);
 if (!$course = $DB->get_record('course', $cond)) {
-    error('Course is misconfigured');
+    print_error('misconfiguredcourse', 'virtualpc');
 }
 
 $cond = array('id' => $cm->instance);
 if (!$virtualpc = $DB->get_record('virtualpc', $cond)) {
-    error('Course module is incorrect');
+    print_error('incorrectcoursemodule', 'virtualpc');
 }
 
 require_login ($course, true, $cm);
@@ -70,9 +70,13 @@ if (has_capability('mod/virtualpc:join', $context) && confirm_sesskey($sesskey))
 
     if ($pool->id or $ticketid > 0) {
 
-        add_to_log($course->id, 'virtualpc', "join", "view.php?id={$cm->id}",
-        'The user with id \''.$USER->id.'\' joined the virtualpc activity with course module id \'' .
-            $cm->id .'\'', $cm->id, $USER->id );
+        $params = array(
+        'context' => $context,
+        'objectid' => $cm->id
+        );
+        $event = \mod_virtualpc\event\virtualpc_joined::create($params);
+        $event->add_record_snapshot('virtualpc', $virtualpc);
+        $event->trigger();
 
         if (preg_match('/^https/i', get_config('virtualpc', 'serverurl'))) {
             $target = get_config('virtualpc', 'serverurl') . '/tkauth/' . $ticketid;
