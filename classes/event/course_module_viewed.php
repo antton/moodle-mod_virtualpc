@@ -1,5 +1,5 @@
 <?php
-// This file is part of Virtual PC plugin.
+// This file is part of Virtual PC module.
 //
 // Virtual PC  is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -16,7 +16,7 @@
 
 /**
  *
- * This code fragment is called by moodle_needs_upgrading() and /admin/index.php
+ * The mod_virtualpc course module viewed event.
  *
  * @package    mod_virtualpc
  * @copyright  2014 Universidad de Málaga - Enseñanza Virtual y Laboratorios Tecnólogicos
@@ -24,11 +24,26 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+namespace mod_virtualpc\event;
+
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2015020604;      // The current plugin version (Date: YYYYMMDDXX) XX = date +"%V"
-$plugin->requires  = 2014111012;      // Requires this Moodle version
-$plugin->cron      = 0;               // Period for cron to check this plugin (secs)
-$plugin->component = 'mod_virtualpc'; // To check on upgrade, that plugin sits in correct place.
-$plugin->maturity = MATURITY_STABLE; // Stable release
-$plugin->release = '2.8.12';         // Human-friendly version name.
+/**
+ * The mod_virtualpc course module viewed event class.
+ *
+ * @package    mod_virtualpc
+ * @copyright  2014 Universidad de Málaga - Enseñanza Virtual y Laboratorios Tecnólogicos
+ * @author     Antonio Godino (asesoramiento [at] evlt [dot] uma [dot] es)
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+class course_module_viewed extends \core\event\course_module_viewed {
+
+    /**
+     * Init method.
+     */
+    protected function init() {
+        $this->data['crud'] = 'r';
+        $this->data['edulevel'] = self::LEVEL_PARTICIPATING;
+        $this->data['objecttable'] = 'virtualpc';
+    }
+}
