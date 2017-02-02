@@ -54,13 +54,13 @@ $string['configauthsmallnameforactivity'] = 'Etiqueta del autenticador UDS que s
 $string['groupname'] = 'Nombre del grupo';
 $string['configgroupname'] = 'Nombre del grupo que se creará en el anterior autenticador de UDS para permitir el acceso desde Moodle';
 $string['groupname'] = 'Nombre del grupo';
-$string['errorconnection'] = 'Error de conexión al servidor de PCs Virtuales: <em><a href="{$a->url}" target=_blank>UDS</a></em>. <br/ >Vuelva a acceder a la actividad y si el error persiste póngase en contacto con el administrador de Moodle.';
+$string['errorconnection'] = 'Error de conexión al servidor UDS de PCs Virtuales. <br/ >Vuelva a acceder a la actividad y si el error persiste póngase en contacto con el administrador de Moodle.';
 $string['virtualpchelp'] = 'Tras pulsar en el botón "Acceder al PC Virtual" puede aparecer un mensaje para descargar un programa necesario para acceder al PC Virtual, solo la primera vez. La dirección de descarga directa es {$a}';
 $string['virtualpcerrorcreatingticketid'] = 'Usuario {$a->username} sin acceso al PC Virtual: <b>{$a->poolname}</b>. Intentelo más tarde, si el problema persiste póngase en contacto con el administrador de Moodle.';
 $string['poollabel'] = '<div style="color:orange">Seleccione el tipo de PC Virtual:</div>';
 $string['poollabel_help'] = 'Seleccione un <b>tipo de PC virtual</b> del listado. Puede que contengan algun comentario que facilite su elección. Tenga en cuenta el número de personas máximo que podrán acceder simultáneamente.';
 $string['virtualpcfieldset'] = 'Opciones para PCs Virtuales';
-$string['filtropool'] = 'Filtro en nombres pool de servicios';
+$string['filtropool'] = 'Filtro en nombres pool de servicios (opcional)';
 $string['configfiltropool'] = 'Establece un filtro mediante una expresión regular sobre el listado de nombres de pooles a ofrecer en este centro. Por ejemplo: Introduzca "^CAV_", sin las comillas, para ofrecer unicamente aquellos pools de servicios que comiencen por CAV_';
 $string['aboutuds'] = '<center><a href="{$a->umaurl}" target=_blank><img src="{$a->umalogo}"/></a></center><br />La <a href="{$a->umaurl}" target=_blank>Universidad de
     Málaga</a> ha desarrollado el módulo Virtual PC de código abierto integrando Moodle y UDS.
@@ -81,7 +81,7 @@ $string['virtualpc:view'] = 'Ver la actividad Pc Virtual';
 $string['virtualpc:addinstance'] = 'Añadir actividades virtualpc (PCs Virtuales)';
 $string['usernotenrolled'] = 'Usuario no tiene permisos, "virtualpc:join" consulte con el administrador de moodle.';
 $string['idpoolnotfound'] = 'El Pc Virtual "{$a->name}" no está actualmente disponible, póngase en contacto con el administrador de Moodle.';
-$string['virtualpcresterror'] = 'En estos momentos no se puede mostrar la actividad. Inténtelo más adelante, si el error continúa, póngase en contacto el administrador de Moodle indicando el siguiente error: Error en la petición REST: {$a}';
+$string['virtualpcresterror'] = 'Error de conexión al servidor UDS de PCs Virtuales. Error en la petición REST: {$a}. Revise los valores de configuración del modulo virtualpc';
 $string['modifiable'] = 'El profesor podrá cambiar el PC virtual seleccionado';
 $string['maxusers'] = 'Hasta {$a} usuarios a la vez';
 $string['virtualpcnotfound'] = 'No existe ningún PC virtual con este nombre en el servidor UDS';

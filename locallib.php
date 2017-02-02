@@ -37,7 +37,7 @@ global $USER;
  */
 function uds_login() {
 
-    global $CFG, $COURSE;
+    global $CFG, $COURSE, $USER;
 
     $udsinstance = new uds();
 
@@ -59,8 +59,15 @@ function uds_login() {
         return $udsinstance;
 
     } else {
-        notice(get_string('virtualpcresterror', 'virtualpc', $urlpath),
-                   $CFG->wwwroot . '/course/view.php?id=' . $COURSE->id);
+        if (is_siteadmin($USER->id)) {
+            notice(get_string('virtualpcresterror', 'virtualpc', $urlpath),
+                   $CFG->wwwroot.'/admin/settings.php?section=modsettingvirtualpc');
+        } else {
+            $feedback = new stdClass();
+            $feedback->url = $udsinstance->get_server();
+            notice (get_string('errorconnection', 'virtualpc', $feedback),
+                    $CFG->wwwroot . '/course/view.php?id=' . $COURSE->id);
+        }
     }
 
 }
