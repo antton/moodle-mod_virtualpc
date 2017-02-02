@@ -92,7 +92,7 @@ if (has_capability('mod/virtualpc:view', $context)) {
     $event->trigger();
 
 } else {
-    prin_error('viewpermission', 'virtualpc');
+    print_error('viewpermission', 'virtualpc');
 }
 
 echo $OUTPUT->footer();
