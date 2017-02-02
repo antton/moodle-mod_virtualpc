@@ -64,7 +64,7 @@ require_once('locallib.php');
         $mform->addHelpButton('name', 'virtualpcname', 'virtualpc');
 
         // Adding the standard "intro" and "introformat" fields.
-        $this->standard_intro_elements();
+        $this->add_intro_editor();
 
         // Adding the rest of virtualpc settings, spreeading all them into this fieldset
         // or adding more fieldsets ('header' elements) if needed for better logic.
