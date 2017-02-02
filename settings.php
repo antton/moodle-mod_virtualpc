@@ -32,35 +32,35 @@ if ($ADMIN->fulltree) {
 
     $settings->add(new admin_setting_configtext ('virtualpc/serverurl',
         get_string('url', 'virtualpc'),
-        get_string('configurl', 'virtualpc'), 'https://demo.udsenterprise.com'));
+        get_string('configurl', 'virtualpc'), ''));
 
     $settings->add(new admin_setting_configtext ('virtualpc/serverport',
         get_string('port', 'virtualpc'),
-        get_string('configport', 'virtualpc'), '443', PARAM_INT));
+        get_string('configport', 'virtualpc'), '', PARAM_INT));
 
     $settings->add(new admin_setting_configtext ('virtualpc/username',
         get_string('username', 'virtualpc'),
-        get_string('configusername', 'virtualpc'), 'udsadmin'));
+        get_string('configusername', 'virtualpc'), ''));
 
     $settings->add(new admin_setting_configpasswordunmask ('virtualpc/password',
         get_string('password', 'virtualpc'),
-        get_string('configpassword', 'virtualpc'), 'UDSAdmin2016'));
+        get_string('configpassword', 'virtualpc'), ''));
 
     $settings->add(new admin_setting_configtext ('virtualpc/authsmallnameforadmin',
         get_string('authsmallnameforadmin', 'virtualpc'),
-        get_string('configauthsmallnameforadmin', 'virtualpc'), 'mood'));
+        get_string('configauthsmallnameforadmin', 'virtualpc'), ''));
 
     $settings->add(new admin_setting_configtext ('virtualpc/filterpoolname',
         get_string('filtropool', 'virtualpc'),
-        get_string('configfiltropool', 'virtualpc'), 'Win7 Moodle'));
+        get_string('configfiltropool', 'virtualpc'), ''));
 
     $settings->add(new admin_setting_configtext ('virtualpc/authsmallnameforactivity',
         get_string('authsmallnameforactivity', 'virtualpc'),
-        get_string('configauthsmallnameforactivity', 'virtualpc'), 'mood'));
+        get_string('configauthsmallnameforactivity', 'virtualpc'), ''));
 
     $settings->add(new admin_setting_configtext ('virtualpc/groupname',
         get_string('groupname', 'virtualpc'),
-        get_string('configgroupname', 'virtualpc'), 'users'));
+        get_string('configgroupname', 'virtualpc'), ''));
 
     $param = new stdClass();
     $param->umalogo = $CFG->wwwroot.'/mod/virtualpc/pix/umalogo.png';

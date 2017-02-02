@@ -475,12 +475,16 @@ class uds {
                 break;
             default:
                 if (is_siteadmin($USER->id)) {
-                    printf("cUrl error (#%d): %s<br>\n", curl_errno($connection),
-                            htmlspecialchars(curl_error($connection)));
+                    $msg = sprintf("Curl error (#%d): %s<br>\n HTTP_CODE error:%d", curl_errno($connection),
+                            htmlspecialchars(curl_error($connection)), $status);
 
                     curl_close($connection);
 
-                    debugging('HTTP_CODE error: '.($status), DEBUG_DEVELOPER);
+                    debugging($msg, DEBUG_DEVELOPER);
+                    if (isset($this->_server) and empty($this->_server)) {
+                        notice (get_string('virtualpcresterror', 'virtualpc', $urlpath),
+                            $CFG->wwwroot.'/admin/settings.php?section=modsettingvirtualpc');
+                    }
                 }
                 $feedback = new stdClass();
                 $feedback->url = $this->get_server();
