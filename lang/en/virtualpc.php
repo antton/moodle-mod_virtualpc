@@ -28,11 +28,7 @@ defined('MOODLE_INTERNAL') || die();
 
 $string['modulename'] = 'Virtual PC';
 $string['modulenameplural'] = 'Virtual PCs';
-$string['modulename_help'] = '<div class="indent">
-<p><b>Virtual PC</b> It offers a virtual computer with an operating system
- and applications already installed selected by the teacher.</p>
-<p>The module has been developed by the University of Málaga</p>
- <img alt="University of Málaga" src="'.$CFG->wwwroot.'/mod/virtualpc/pix/umalogo.png"/></div>';
+$string['modulename_help'] = '<div class="indent"><p><b>Virtual PC</b> It offers a virtual computer with an operating system and applications already installed selected by the teacher.</p><p>The module has been developed by the <a href="http://www.uma.es" target="_blank">Universidad de Málaga</a></p></div>';
 $string['virtualpcintro'] = '<b>Description:</b>';
 $string['virtualpcname'] = 'Virtual PC name';
 $string['joinvirtualpc'] = 'Access to Virtual PC';
@@ -62,17 +58,7 @@ $string['poollabel_help'] = 'Select the virtual PC type from the list. Please no
 $string['virtualpcfieldset'] = 'Virtual PC activity settings';
 $string['filtropool'] = 'Pool filter regular expression';
 $string['configfiltropool'] = 'Optional regular expression to filter from which UDS pools the teacher will be able to select when adding a Virtual PC activity';
-$string['aboutuds'] = '<center><a href="{$a->umaurl}" target=_blank><img src="{$a->umalogo}"/></a></center><br />
-    <a href="{$a->umaurl}" target=_blank>University of Malaga</a> has developed the open source Virtual PC module integrating Moodle and UDS.
-    This integration is designed to simplify access to remote desktops from Moodle, providing a single login between the two systems, with easy creation and management of activities that allow access to different types of virtual computers.<br />
-<br /><em><a href="{$a->udsurl}" target=_blank>UDS</a></em> is a multiplatform virtual computer connection broker for:<br />
-    <ul><li>eLearning<br />
-    <li>VDI: Managing and Deploying Windows and Linux Virtual Desktops<br />
-    <li>Manage users access to IT resources in Data Center or Cloud<br />
-    <li>Consolidation of user services using new or existing modules</ul><br />
-<p>UDS Enterprise is used in different sectors and production environments such as education, public administration, call center, insurance, remote offices, etc.</p>
-<p>More than 10,000 virtual desktops Windows and Linux are managed and deployed with UDS Enterprise every day, providing simplicity and flexibility to the VDI systems of different companies and entities.</p>
-<p>Visit <a href="{$a->udsurl}" target=_blank>{$a->udsurl}</a>  for information on support for businesses.</p>';
+$string['aboutuds'] = '<center><a href="{$a->umaurl}" target=_blank><img src="{$a->umalogo}"/></a></center><br /><a href="{$a->umaurl}" target=_blank>University of Malaga</a> has developed the open source Virtual PC module integrating Moodle and UDS.This integration is designed to simplify access to remote desktops from Moodle, providing a single login between the two systems, with easy creation and management of activities that allow access to different types of virtual computers.<br /><br /><em><a href="{$a->udsurl}" target=_blank>UDS</a></em> is a multiplatform virtual computer connection broker for:<br /><ul><li>eLearning<br /><li>VDI: Managing and Deploying Windows and Linux Virtual Desktops<br /><li>Manage users access to IT resources in Data Center or Cloud<br /><li>Consolidation of user services using new or existing modules</ul><br /><p>UDS Enterprise is used in different sectors and production environments such as education, public administration, call center, insurance, remote offices, etc.</p><p>More than 10,000 virtual desktops Windows and Linux are managed and deployed with UDS Enterprise every day, providing simplicity and flexibility to the VDI systems of different companies and entities.</p><p>Visit <a href="{$a->udsurl}" target=_blank>{$a->udsurl}</a>  for information on support for businesses.</p>';
 $string['virtualpc:join'] = 'Access virtual PC';
 $string['virtualpc:view'] = 'View Virtual PC activity';
 $string['virtualpc:addinstance'] = 'Add Virtual PC activities';
