@@ -28,10 +28,7 @@ defined('MOODLE_INTERNAL') || die();
 
 $string['modulename'] = 'PC Virtual';
 $string['modulenameplural'] = 'PCs Virtuales';
-$string['modulename_help'] = '<div class="indent">
-<p><b>PC Virtual</b> ofrece al participante un equipo con el sistema operativo y aplicaciones ya instaladas.
-El participante, tras pulsar el botón de acceso de la actividad, entrará al escritorio virtual seleccionado.</p>
-<p>El módulo ha sido desarrollado por la Universidad de Málaga</p><img alt="Universidad de Málaga" src="'.$CFG->wwwroot.'/mod/virtualpc/pix/umalogo.png"/></div>';
+$string['modulename_help'] = '<div class="indent"><p><b>PC Virtual</b> ofrece al participante un equipo con el sistema operativo y aplicaciones ya instaladas. El participante, tras pulsar el botón de acceso de la actividad, entrará al escritorio virtual seleccionado.</p><p>El módulo ha sido desarrollado por la <a href="http://www.uma.es" target="_blank">Universidad de Málaga</a></p></div>';
 $string['virtualpcintro'] = '<b>Descripción:</b>';
 $string['virtualpcname'] = 'Título de la actividad';
 $string['joinvirtualpc'] = 'Acceder al PC Virtual';
@@ -62,20 +59,7 @@ $string['poollabel_help'] = 'Seleccione un <b>tipo de PC virtual</b> del listado
 $string['virtualpcfieldset'] = 'Opciones para PCs Virtuales';
 $string['filtropool'] = 'Filtro en nombres pool de servicios (opcional)';
 $string['configfiltropool'] = 'Establece un filtro mediante una expresión regular sobre el listado de nombres de pooles a ofrecer en este centro. Por ejemplo: Introduzca "^CAV_", sin las comillas, para ofrecer unicamente aquellos pools de servicios que comiencen por CAV_';
-$string['aboutuds'] = '<center><a href="{$a->umaurl}" target=_blank><img src="{$a->umalogo}"/></a></center><br />La <a href="{$a->umaurl}" target=_blank>Universidad de
-    Málaga</a> ha desarrollado el módulo Virtual PC de código abierto integrando Moodle y UDS.
-    Esta integración está diseñada para simplificar el acceso a escritorios remotos desde Moodle,
-proporcionando un único inicio de sesión entre los dos sistemas, con una fácil creación y administración de actividades que permiten el acceso a diferentes tipos de maquinas virtuales.<br />
-<br /><em><a href="{$a->udsurl}" target=_blank>
-UDS</a></em> es un broker de conexiones a máquinas virtuales multiplataforma para:<br />
-    <ul><li>eLearning<br />
-	<li>VDI: Administración y despliegue escritorios virtuales Windows y Linux<br />
-	<li>Gestión acceso usuarios a recursos TI en Data Center o Cloud<br />
-	<li>Consolidación servicios usuario mediante nuevos módulos o existentes</ul><br>
-    <p>UDS Enterprise se emplea en diferentes sectores y entornos de producción como educación, administración pública, call center, seguros, oficinas remotas, etc.</p>
-    <p>Más de 10.000 escritorios virtuales Windows y Linux son gestionados y desplegados con UDS Enterprise cada día, dotando de sencillez y flexibilidad a los sistemas VDI
-    de distintas empresas y entidades.</p>
-    <p>Visite <a href="{$a->udsurl}" target=_blank>{$a->udsurl}</a> para obtener información sobre soporte para empresas.<br />';
+$string['aboutuds'] = '<center><a href="{$a->umaurl}" target=_blank><img src="{$a->umalogo}"/></a></center><br />La <a href="{$a->umaurl}" target=_blank>Universidad de Málaga</a> ha desarrollado el módulo Virtual PC de código abierto integrando Moodle y UDS. Esta integración está diseñada para simplificar el acceso a escritorios remotos desde Moodle, proporcionando un único inicio de sesión entre los dos sistemas, con una fácil creación y administración de actividades que permiten el acceso a diferentes tipos de maquinas virtuales.<br /><br /><em><a href="{$a->udsurl}" target=_blank>UDS</a></em> es un broker de conexiones a máquinas virtuales multiplataforma para:<br /><ul><li>eLearning<br /><li>VDI: Administración y despliegue escritorios virtuales Windows y Linux<br /><li>Gestión acceso usuarios a recursos TI en Data Center o Cloud<br /><li>Consolidación servicios usuario mediante nuevos módulos o existentes</ul><br><p>UDS Enterprise se emplea en diferentes sectores y entornos de producción como educación, administración pública, call center, seguros, oficinas remotas, etc.</p><p>Más de 10.000 escritorios virtuales Windows y Linux son gestionados y desplegados con UDS Enterprise cada día, dotando de sencillez y flexibilidad a los sistemas VDI de distintas empresas y entidades.</p><p>Visite <a href="{$a->udsurl}" target=_blank>{$a->udsurl}</a> para obtener información sobre soporte para empresas.</p><br />';
 $string['virtualpc:join'] = 'Acceder al recurso remoto proporcionado desde la actividad PCs Virtuales';
 $string['virtualpc:view'] = 'Ver la actividad Pc Virtual';
 $string['virtualpc:addinstance'] = 'Añadir actividades virtualpc (PCs Virtuales)';
